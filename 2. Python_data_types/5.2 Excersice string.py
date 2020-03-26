@@ -1,0 +1,5 @@
+print("Hi! This programe will generate your initilas based on your name, middle name and last name")
+name = (input("Plase type your name: "))
+middle = (input ("Plase type your middle name: "))
+last = (input ("Plase type your last name: "))
+print("Your initials are:", name[0],".", middle[0],".", last[0])
