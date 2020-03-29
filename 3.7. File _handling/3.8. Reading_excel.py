@@ -33,3 +33,4 @@ max_row  = sheet_obj.max_row
 for i in range(1, max_row+1):
     cell_obj1 = sheet_obj.cell(row=i, column = 1)
     print(cell_obj1.value)
+    print(sales)
