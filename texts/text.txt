@@ -1,3 +1,0 @@
-This text will overwrite the content of our file
-This text will be added to the text
-This text will be added to the text
