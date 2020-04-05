@@ -1,4 +1,5 @@
 myString = "Some text"
+print(myString[0:9:2])
 myString = "33"
 print(myString)
 myString = 'She said"meet me at 5"'

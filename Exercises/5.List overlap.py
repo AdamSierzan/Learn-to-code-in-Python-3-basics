@@ -23,7 +23,7 @@ for z in x:
 print(zlist)
 
 
-#* For random numbers
+#* For 5 random numbers
 import random
 
 randomlist_c = []
