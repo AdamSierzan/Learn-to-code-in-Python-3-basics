@@ -14,4 +14,3 @@ print(c)
 
 d = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 print([f for f in d if (f%2 == 0)])
-import numpy

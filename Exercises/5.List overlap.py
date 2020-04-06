@@ -22,6 +22,13 @@ for z in x:
     zlist.append(z)
 print(zlist)
 
+# or 
+x = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+zlist = []
+zlist = [z for z in x if ( z in y)]
+print(zlist)
+
 
 #* For 5 random numbers
 import random
@@ -39,8 +46,6 @@ print(randomlist_d)
 print(set(randomlist_c) & set(randomlist_d))
 
 #* generates 5 random numbers
-randomlist_e = random.sample(range(1,30), 5)
-randomlist_f = random.sample(range(1, 30), 5)
-print(set(randomlist_e) & set(randomlist_f))
-
-
+randomlist_e = random.sample(range(1,30), 15)
+randomlist_f = random.sample(range(1, 30), 15)
+print(set(xy for xy in (randomlist_e) if xy in (randomlist_f)))

@@ -7,3 +7,4 @@ if (x[0:]) == (x[::-1]):
     print("your string is palindrome")
 else:
     print("your string isn't a palindrome")
+
