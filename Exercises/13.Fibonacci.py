@@ -8,7 +8,4 @@ new_list = []
 
 for number in range(100):
     new_list.append(number)
-print(new_list)
-
-
-0 + 1 = 2 2 + 3 = 4
+print(len(new_list[:-1]))
