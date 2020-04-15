@@ -20,3 +20,4 @@ for x in a:
         print("fizz & buzz")
     else:
         print(x)
+        
