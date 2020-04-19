@@ -7,44 +7,33 @@ print("If your guess is farther than your most recent guess, I'll say you're get
 print("If your guess is closer than your most recent guess, I'll say you're getting WARMER")
 print("LET'S PLAY!")
 
-count = 0
-rounds = 0
-shots = []
+shots = [0]
 the_number_to_guess = random.randint(1,101)
 
-while count == 0:
+while True:
     
-    the_number_to_guess = random.randint(1,101)
     players_guess = int(input("Type your number: "))
-    shots.append(players_guess)
+    print(the_number_to_guess)
     
     if players_guess > 100 or players_guess < 1:
         print("Out of band")
-    elif the_number_to_guess - players_guess <= 10:
-        print("Warm")
-    elif the_number_to_guess - players_guess >= 10:
-        print("Cold")
-    elif players_guess == the_number_to_guess:
-        print("You've guessed it")
-        break
-    else:
-        print("Sorry not this time")
-        break
-    count+=1
-    rounds+=1
-while count == 1:
-    
-    the_number_to_guess = random.randint(1,101)
-    players_guess = int(input("Type your number: "))
+        continue
+   
+    if players_guess == the_number_to_guess:
+        print("You've guessed it in only", len(shots), "guesses")
+        break    
+      
     shots.append(players_guess)
+  
+    if shots[-2]:
+        if abs(the_number_to_guess) - abs(players_guess) < abs(the_number_to_guess) - abs(shots[-2]):
+            print("warmer")
+        else: 
+            print("colder")
+   
+    else:    
+        if the_number_to_guess - players_guess <= 10:
+            print("Warm")
+        else:
+            print("Cold")
     
-    if players_guess > 100 or players_guess < 1:
-        print("Out of band")
-    elif the_number_to_guess - players_guess < the_number_to_guess - shots[-1]:
-        print("warmer")
-    elif the_number_to_guess - players_guess > the_number_to_guess - shots[-1]:
-        print("colder")
-    elif players_guess == the_number_to_guess:
-        print("You've guessed it")
-    else:
-        print("Sorry not this time")
