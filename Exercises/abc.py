@@ -7,6 +7,4 @@ def string_splosion(str):
 
 print(string_splosion("Dobry"))
 
-def old_macdonald(name):
-    return name[0].upper() 
-print(old_macdonald("old_macdonald"))
+result
